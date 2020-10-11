@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StarWars Characters</title>
+    <link href="index.html" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="info-container">
+        <h1 class="title">StarWars Characters</h1>
+        <h1 id="name"></h1>
+            <div class="popup" onclick="myFunction()">
+                <a href="https://swapi.dev/api/people/" class="popuptext" id="information"></a><br>
+            </div> 
+                <script>
+                    function myFunction() {
+                    var popup = document.getElementById("information");
+                     popup.classList.toggle("show");
+                    }
+                </script>
+   
+        <button type="button" id="button" name="button">find someone</button>
+
+        <header>
+            <h1 class="title">Characters</h1><br>
+            <button id="btn">Fetch Info for characters</button>
+            </header>
+
+        <div id="character-info"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script async defer src="./main.js"></script>
+</body>
+</html>
